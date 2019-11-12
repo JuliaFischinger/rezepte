@@ -1,8 +1,8 @@
 <?php
 
-use Illuminate\Database\Migrations\Migration;
-use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
 
 class CreateRezepteTable extends Migration
 {
@@ -14,7 +14,9 @@ class CreateRezepteTable extends Migration
     public function up()
     {
         Schema::create('rezepte', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->increments('id');
+            $table->string('name');
+            $table->text('detail');
             $table->timestamps();
         });
     }

@@ -16,7 +16,6 @@
 
                     You are logged in!
 
-                    hallo
                 </div>
             </div>
         </div>
