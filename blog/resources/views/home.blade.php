@@ -13,8 +13,10 @@
                             {{ session('status') }}
                         </div>
                     @endif
-
-                    You are logged in!
+                    
+                    <h2>Wilkommen bei RezeptBuch!</h2>
+                    <br>
+                    Du hast dich erfolgreich eingeloggt.
 
                 </div>
             </div>
