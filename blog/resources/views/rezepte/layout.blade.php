@@ -14,7 +14,6 @@ strong,p{color: #fff;}
 <body style="background-image: url('https://toponline.top-yp.de/images/bg2.jpg?97bd65282bcc9cbe89f9ff8db20fa542');background-size:cover;">
 
 <div class="container">
-hallo
     @yield('content')
 </div>
 

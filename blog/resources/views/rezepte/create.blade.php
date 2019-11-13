@@ -1,20 +1,20 @@
-@extends('rezepte.layout')
+@extends('products.layout')
 
 @section('content')
 <div class="row">
     <div class="col-lg-12 margin-tb">
         <div class="pull-left my-4">
-            <h2>Füge ein neues Rezept hinzu</h2>
+            <h2>Add New Product</h2>
         </div>
         <div class="pull-right">
-            <a class="btn btn-primary mb-4" href="{{ route('rezepte.index') }}"> Back</a>
+            <a class="btn btn-primary mb-4" href="{{ route('products.index') }}"> Back</a>
         </div>
     </div>
 </div>
 
 @if ($errors->any())
     <div class="alert alert-danger">
-        <strong>Ups!</strong> Dir ist bei der Eingabe ein Fehler unterlaufen.<br><br>
+        <strong>Ups!</strong> Die ist bei der Eingabe ein Fehler unterlaufen.<br><br>
         <ul>
             @foreach ($errors->all() as $error)
                 <li>{{ $error }}</li>
@@ -23,7 +23,7 @@
     </div>
 @endif
 
-<form action="{{ route('rezepte.store') }}" method="POST">
+<form action="{{ route('products.store') }}" method="POST">
     @csrf
 
      <div class="row">

@@ -1,4 +1,4 @@
-@extends('rezepte.layout')
+@extends('products.layout')
 
 @section('content')
     <div class="row">
@@ -7,7 +7,7 @@
                 <h1>Mein erstes Laravel-Projekt</h1>
             </div>
             <div class="pull-right mb-4">
-                <a class="btn btn-success" href="{{ route('rezepte.create') }}"> Neues Rezept hinzufügen</a>
+                <a class="btn btn-success" href="{{ route('products.create') }}"> Neues Produkt anlegen</a>
             </div>
         </div>
     </div>
@@ -25,17 +25,17 @@
             <th>Details</th>
             <th width="280px">Aktion</th>
         </tr>
-        @foreach ($rezepte as $rezept)
+        @foreach ($products as $product)
         <tr>
             <td>{{ ++$i }}</td>
-            <td>{{ $rezept->name }}</td>
-            <td>{{ $rezept->detail }}</td>
+            <td>{{ $product->name }}</td>
+            <td>{{ $product->detail }}</td>
             <td>
-                <form action="{{ route('rezepte.destroy',$rezept->id) }}" method="POST">
+                <form action="{{ route('products.destroy',$product->id) }}" method="POST">
 
-                    <a class="btn btn-info" href="{{ route('rezepte.show',$rezept->id) }}">Details</a>
+                    <a class="btn btn-info" href="{{ route('products.show',$product->id) }}">Details</a>
 
-                    <a class="btn btn-primary" href="{{ route('rezepte.edit',$rezept->id) }}">Bearbeiten</a>
+                    <a class="btn btn-primary" href="{{ route('products.edit',$product->id) }}">Bearbeiten</a>
 
                     @csrf
                     @method('DELETE')
@@ -47,6 +47,6 @@
         @endforeach
     </table>
 
-    {!! $rezepte->links() !!}
+    {!! $products->links() !!}
 
 @endsection
