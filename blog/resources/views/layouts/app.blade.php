@@ -84,12 +84,14 @@
             </div>
         </nav>
 
+
 <style>
-table{background-color: #fff;color: black;}
+table{background-color: white;color: black;}
 table strong{color: black;}
 h2,h1{color: #fff;}
 strong,p{color: #fff;}
 </style>
+
 <body style="background-image: url('https://cdn.pixabay.com/photo/2017/06/01/18/46/cook-2364221_1280.jpg');background-size:cover;">
 
         <main class="py-4">

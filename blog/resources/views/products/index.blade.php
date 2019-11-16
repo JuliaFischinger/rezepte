@@ -1,6 +1,12 @@
-@extends('products.layout')
+@extends('layouts.app')
 
 @section('content')
+<head>
+    <title>Die besten Rezepte auf <strong>RezeptBuch </strong></title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<div class="container">
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left my-4">
@@ -21,8 +27,8 @@
     <table class="table table-bordered">
         <tr>
             <th>Nr.</th>
-            <th>Name</th>
-            <th>Details</th>
+            <th>Gericht</th>
+            <th>Beschreibung</th>
             <th width="280px">Aktion</th>
         </tr>
         @foreach ($products as $product)
@@ -48,5 +54,6 @@
     </table>
 
     {!! $products->links() !!}
+</div>
 
 @endsection

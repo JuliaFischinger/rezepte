@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-10">
             <div class="card">
                 <div class="card-header">
                     <h2>Wilkommen bei <strong>RezeptBuch!</h2>
@@ -15,7 +15,7 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                    Du hast dich erfolgreich eingeloggt.
+                    Hier findest du die besten Rezepte und kannst selbst deine Lieblinsrezepte beitragen.
 
                 </div>
             </div>
