@@ -8,7 +8,7 @@
             <h2>Füge ein neues Rezept hinzu.</h2>
         </div>
         <div class="pull-right">
-            <a class="btn btn-primary mb-4" href="{{ route('products.index') }}"> Zurück</a>
+            <a class="btn btn-primary mb-4" href="{{ route('rezepte.index') }}"> Zurück</a>
         </div>
     </div>
 </div>
@@ -24,7 +24,7 @@
     </div>
 @endif
 
-<form action="{{ route('products.store') }}" method="POST">
+<form action="{{ route('rezepte.store') }}" method="POST">
     @csrf
 
      <div class="row">

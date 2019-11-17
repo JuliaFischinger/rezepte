@@ -8,7 +8,7 @@
                 <h2>Bearbeite das Rezept</h2>
             </div>
             <div class="pull-right">
-                <a class="btn btn-primary mb-4" href="{{ route('products.index') }}"> Back</a>
+                <a class="btn btn-primary mb-4" href="{{ route('rezepte.index') }}"> Zurück</a>
             </div>
         </div>
     </div>
@@ -24,7 +24,7 @@
         </div>
     @endif
 
-    <form action="{{ route('products.update',$product->id) }}" method="POST">
+    <form action="{{ route('rezepte.update',$product->id) }}" method="POST">
         @csrf
         @method('PUT')
 

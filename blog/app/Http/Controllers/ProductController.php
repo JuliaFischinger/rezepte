@@ -14,9 +14,9 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $products = Product::latest()->paginate(5);
+        $rezepte = Product::latest()->paginate(5);
 
-        return view('products.index',compact('products'))
+        return view('rezepte.index')
             ->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
@@ -27,7 +27,7 @@ class ProductController extends Controller
      */
     public function create()
     {
-        return view('products.create');
+        return view('rezepte.create');
     }
 
     /**
@@ -45,7 +45,7 @@ class ProductController extends Controller
 
         Product::create($request->all());
 
-        return redirect()->route('products.index')
+        return redirect()->route('rezepte.index')
                         ->with('success','Product created successfully.');
     }
 
@@ -57,7 +57,7 @@ class ProductController extends Controller
      */
     public function show(Product $product)
     {
-        return view('products.show',compact('product'));
+        return view('rezepte.show',compact('product'));
     }
 
     /**
@@ -68,7 +68,7 @@ class ProductController extends Controller
      */
     public function edit(Product $product)
     {
-        return view('products.edit',compact('product'));
+        return view('rezepte.edit',compact('product'));
     }
 
     /**
@@ -87,21 +87,21 @@ class ProductController extends Controller
 
         $product->update($request->all());
 
-        return redirect()->route('products.index')
+        return redirect()->route('rezepte.index')
                         ->with('success','Product updated successfully');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Product  $product
+     * @param  \App\Product  $rezepte
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Product $product)
+    public function destroy(Product $rezepte)
     {
-        $product->delete();
+        $rezepte->delete();
 
-        return redirect()->route('products.index')
+        return redirect()->route('rezepte.index')
                         ->with('success','Product deleted successfully');
     }
 }

@@ -1,5 +1,6 @@
 @extends('layouts.app')
 @section('content')
+
 <div class="container">
     <div class="row">
         <div class="col-lg-12 margin-tb">
@@ -7,7 +8,7 @@
                 <h2> Detailansicht</h2>
             </div>
             <div class="pull-right">
-                <a class="btn btn-primary mb-4" href="{{ route('products.index') }}"> zurück</a>
+                <a class="btn btn-primary mb-4" href="{{ route('rezepte.index') }}"> zurück</a>
             </div>
         </div>
     </div>

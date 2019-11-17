@@ -40,7 +40,7 @@
                     <ul class="navbar-nav ml-auto">
 
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url('products') }}">{{ __('Rezepte') }}</a>
+                        <a class="nav-link" href="{{ url('rezepte') }}">{{ __('Rezepte') }}</a>
                     </li>
 
                     <li class="nav-item">
@@ -83,6 +83,7 @@
                 </div>
             </div>
         </nav>
+
 
 
 <style>

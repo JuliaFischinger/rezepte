@@ -21,7 +21,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::resource('products','ProductController')->middleware('auth');
+Route::resource('rezepte','ProductController')->middleware('auth');
 
 Route::get('/', 'PagesController@index');
 Route::get('/impressum', 'PagesController@imprint');
